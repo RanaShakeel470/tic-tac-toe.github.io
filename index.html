@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>tic-tac-toe</title>
+</head>
+<body>
+    <span class="heading">tic-tac-toe</span>
+    <div class="text">Invalid Choise</div>
+    <div class="container">
+        <div class="row row1">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+        </div>
+        <div class="row row2">
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+            <div class="box box6"></div>
+        </div>
+        <div class="row row3">
+            <div class="box box7" ></div>
+            <div class="box box8"></div>
+            <div class="box box9"></div>
+        </div>
+    </div>
+    <button>Restart</button>
+    <div class="wintext">
+        You Win
+    </div>
+    <div class="endtext">
+        Game Over
+    </div>
+    <aside>
+        <h1>Company:-</h1>
+        <span>RANA-THE-LEGEND Software Makers</span>
+        <h1>Programmer:-</h1>
+        <span>Rana Shakeel(CEO of RANA-THE-LEGEND)</span>
+    </aside>
+    <script>
+        const box1 = document.querySelector(".box1");
+        const box2 = document.querySelector(".box2");
+        const box3 = document.querySelector(".box3");
+        const box4 = document.querySelector(".box4");
+        const box5 = document.querySelector(".box5");
+        const box6 = document.querySelector(".box6");
+        const box7 = document.querySelector(".box7");
+        const box8 = document.querySelector(".box8");
+        const box9 = document.querySelector(".box9");
+        const text = document.querySelector(".text");
+        var box = document.querySelectorAll(".box");
+        const button = document.querySelector("button");
+        const wintext = document.querySelector(".wintext");
+        const endtext = document.querySelector(".endtext");
+        const container = document.querySelector(".container");
+        var a=1;
+        var b = 1;
+        var c=1,d=1,e=1,f=1,g=1,h=1,i=1,j=1,k=1,l=1,m=1,n=1,o=1,p=1,q=1,r=1,s=1,t,u,v,w,x,y,z;
+        var box1color="0",box2color="b",box3color="c",box4color="d",box5color="e",box6color="f",box7color="g",box8color="h",box9color="i";
+        var toggle = 1;
+        container.addEventListener('click',()=>{
+            if (box1color!="a" && box2color!="b" && box3color!="c" && box4color!="d" && box5color!="e" && box6color!="f" && box7color!="g" && box8color!="h" && box9color!="i" &&wintext.style.display !== "block") {
+                endtext.style.display = "block";
+                
+            }
+            console.log("enter");
+        })
+        box1.addEventListener('click',()=>{
+            if (c==1) {
+                text.style.display = "none";
+                if (toggle==1) {
+                box1.style.background = "red";
+                box1color = "red";
+                toggle=0;
+            } else {
+                box1.style.background = "blue";
+                box1color = "blue";
+                toggle=1;
+            }
+            console.log(box1color)
+            if (box1color==box2color && box2color==box3color ||
+                box1color==box4color && box4color==box7color ||
+                box1color==box5color && box5color==box9color) {
+                wintext.style.display= "block"
+            }
+            c=2;
+                
+            } else {
+                text.style.display = "block"
+                
+            }
+           
+        })
+        box2.addEventListener('click',()=>{
+            if (d==1) {
+                text.style.display = "none";
+                if (toggle==1) {
+                box2.style.background = "red";
+                box2color = "red";
+                toggle=0;
+            } else {
+                box2.style.background = "blue";
+                box2color = "blue";
+                toggle=1;
+            }
+            
+            d=2;
+            if (box2color==box1color && box2color==box3color ||
+                box2color==box5color && box5color==box8color) {
+                    wintext.style.display= "block"
+                
+            }
+
+                
+            } else {
+                text.style.display = "block";
+                
+            }
+           
+            
+        })
+        box3.addEventListener('click',()=>{
+            if (e==1) {
+                text.style.display = "none";
+                if (toggle==1) {
+                box3.style.background = "red";
+                box3color = "red";
+                toggle=0;
+            } else {
+                box3.style.background = "blue";
+                box3color = "blue";
+                toggle=1;
+            }
+            
+            if (box3color==box2color && box2color==box1color ||
+                box3color==box6color && box6color==box9color ||
+                box3color==box5color && box5color==box7color) {
+               wintext.style.display = "block";
+            }
+            e=2;
+
+                
+            } else {
+                text.style.display = "block";
+                
+            }
+           
+            
+        })
+        box4.addEventListener('click',()=>{
+            if (f==1) {
+                text.style.display = "none";
+                if (toggle==1) {
+                box4.style.background = "red";
+                box4color = "red";
+                toggle=0;
+            } else {
+                box4.style.background = "blue";
+                box4color = "blue";
+                toggle=1;
+            }
+            if (box4color==box5color && box5color==box6color ||
+                box1color==box4color && box4color==box7color) {
+                wintext.style.display = "block";
+            }
+            f=2;
+
+                
+            } else {
+                text.style.display = "block";
+                
+            }
+           
+            
+        })
+        box5.addEventListener('click',()=>{
+            if (g==1) {
+                text.style.display = "none";
+                if (toggle==1) {
+                box5.style.background = "red";
+                box5color = "red";
+                toggle=0;
+            } else {
+                box5.style.background = "blue";
+                box5color = "blue";
+                toggle=1;
+            }
+           if (box4color==box5color && box5color==box6color ||
+                box2color==box5color && box5color==box8color ||
+                box3color==box5color && box5color==box7color ||
+                box1color==box5color && box5color==box9color) {
+                    wintext.style.display = "block";
+           }
+            g=2;
+
+                
+            } else {
+                text.style.display = "block";
+                
+            }
+           
+            
+        })
+        box6.addEventListener('click',()=>{
+            if (h==1) {
+                text.style.display = "none";
+                if (toggle==1) {
+                box6.style.background = "red";
+                box6color = "red";
+                toggle=0;
+            } else {
+                box6.style.background = "blue";
+                box6color = "blue";
+                toggle=1;
+            }
+            if (box4color==box5color && box5color==box6color ||
+            box3color==box6color && box6color==box9color) {
+                wintext.style.display = "block";
+            }
+            h=2;
+
+                
+            } else {
+                text.style.display = "block";
+                
+            }
+           
+            
+        })
+        box7.addEventListener('click',()=>{
+            if (i==1) {
+                text.style.display = "none";
+                if (toggle==1) {
+                box7.style.background = "red";
+                box7color = "red";
+                toggle=0;
+            } else {
+                box7.style.background = "blue";
+                box7color = "blue";
+                toggle=1;
+            }
+            if ( box1color==box4color && box4color==box7color ||
+                 box7color==box8color && box8color==box9color ||
+                 box7color==box5color && box5color==box3color) {
+                wintext.style.display = "block";
+            }
+            i=2;
+
+                
+            } else {
+                text.style.display = "block";
+                
+            }
+           
+            
+        })
+        box8.addEventListener('click',()=>{
+            if (j==1) {
+                text.style.display = "none";
+                if (toggle==1) {
+                box8.style.background = "red";
+                box8color = "red";
+                toggle=0;
+            } else {
+                box8.style.background = "blue";
+                box8color = "blue";
+                toggle=1;
+            }
+            if (
+                 box7color==box8color && box8color==box9color ||
+                 box8color==box5color && box5color==box2color) {
+                wintext.style.display = "block";
+            }
+            j=2;
+
+                
+            } else {
+                text.style.display = "block";
+                
+            }
+           
+            
+        })
+        box9.addEventListener('click',()=>{
+            if (k==1) {
+                text.style.display = "none";
+                if (toggle==1) {
+                box9.style.background = "red";
+                box9color = "red";
+                toggle=0;
+            } else {
+                box9.style.background = "blue";
+                box9color = "blue";
+                toggle=1;
+            }
+            if (box9color==box5color && box5color==box1color ||
+                box9color==box6color && box6color==box3color ||
+                box9color==box8color && box8color==box7color ) {
+                    wintext.style.display = "block";
+            }
+            k=2;
+
+                
+            } else {
+                text.style.display = "block";
+                
+            }
+           
+            
+        })
+        button.addEventListener('click',()=>{
+            box1.style.background = "transparent";
+            box4.style.background = "transparent";
+            box2.style.background = "transparent";
+            box3.style.background = "transparent";
+            box5.style.background = "transparent";
+            box6.style.background = "transparent";
+            box7.style.background = "transparent";
+            box8.style.background = "transparent";
+            box9.style.background = "transparent";
+            c=1,d=1,e=1,f=1,g=1,h=1,i=1,j=1,k=1;
+            wintext.style.display = "none";
+            endtext.style.display = "none"
+            box1color="a";
+            box2color="b";
+            box3color="c";
+            box4color="d";
+            box5color="e";
+            box6color="f";
+            box7color="g";
+            box8color="h";
+            box9color="i";
+        
+        })
+
+        
+
+    </script>
+    
+</body>
+</html>
